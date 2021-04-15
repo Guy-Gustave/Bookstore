@@ -1,17 +1,15 @@
-export default addBook = (bookObj) => {
-  return(
-    {
-      type: 'CREATE_BOOK',
-      book: {...bookObj}
-    }
-  )
-}
+const addBook = (bookObj) => (
+  {
+    type: 'CREATE_BOOK',
+    book: { ...bookObj },
+  }
+);
 
-export default removeBook = id => {
-  return(
-    {
-      type: 'REMOVE_BOOK',
-      id
-    }
-  );
-}
+const removeBook = (id) => (
+  {
+    type: 'REMOVE_BOOK',
+    id,
+  }
+);
+
+export { addBook, removeBook };

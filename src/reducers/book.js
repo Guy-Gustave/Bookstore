@@ -1,9 +1,6 @@
-let myId = () => {
-  return Math.floor(Math.random() * 100)
-};
+const myId = () => Math.floor(Math.random() * 100);
 
-
-let initialState = [
+const initialState = [
   {
     id: myId(),
     title: 'East Africa Book for Geniuses.',
@@ -12,22 +9,22 @@ let initialState = [
   {
     id: myId(),
     title: 'The history of React js',
-    category: 'Biography'
+    category: 'Biography',
   },
 
   {
     id: myId(),
     title: 'Guy lives in Burundi',
-    category: 'History'
-  }
-]
+    category: 'History',
+  },
+];
 
 const books = (state = initialState, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
-      return [...state, action.book ];
+      return [...state, action.book];
     case 'REMOVE_BOOK':
-      return [ ...state.filter(book => action.id !== book.id)];
+      return [...state.filter((book) => action.id !== book.id)];
     default:
       return state;
   }
