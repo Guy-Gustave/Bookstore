@@ -2,29 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = (props) => {
-  const { title, category } = props;
+  const { book } = props;
   return (
-    <>
-      <h2>
-        Title:
-        {title}
-      </h2>
-      <p>
-        Category:
-        {category}
-      </p>
-    </>
+    <tr>
+      <td>{book.id}</td>
+      <td>{book.title}</td>
+      <td>{book.category}</td>
+    </tr>
   );
 };
 
 Book.defaultProps = {
-  title: '',
-  category: '',
+  book: {},
 };
 
 Book.propTypes = {
-  title: PropTypes.string,
-  category: PropTypes.string,
+  book: PropTypes.objectOf(PropTypes.object),
 };
 
 export default Book;
