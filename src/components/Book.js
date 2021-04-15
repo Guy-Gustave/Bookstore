@@ -1,12 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-let Book = (props) => {
-  const {title, category} = props;
-  return(
+let Book = (book) => {
+  const { title, category } = book;
+  return (
     <>
-      <h2>Title: {title}</h2>
-      <p>Category: {category}</p>
+      {/* <h2>Title: {title}</h2>
+      <p>Category: {category}</p> */}
+      <tr>
+        <td>
+          {title}
+        </td>
+        <td>
+          {category}
+        </td>
+      </tr>
     </>
   )
 }
