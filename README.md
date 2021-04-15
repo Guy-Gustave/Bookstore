@@ -27,6 +27,11 @@ After cloning the project, you should move into the directory where the project 
 - Linkedin: [Guy-Gustave](https://www.linkedin.com/in/guy-gustave-nigaba)
 - E-mail: [guymoustapha@gmail.com](guymoustapha@gmail.com)
 
+👤 **Roy Ntaate**
+
+- Github: [@RNtaate](https://github.com/RNtaate)
+- Twitter: [@RNtaate](https://twitter.com/RNtaate)
+- Linkedin: [roy-ntaate](https://linkedin.com/in/roy-ntaate)
 
 ## Show your support
 
