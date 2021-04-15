@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Book from '../components/Book';
 
 const BooksList = (props) => {
   const { listBooks } = props;
@@ -11,13 +12,7 @@ const BooksList = (props) => {
         <th>Title</th>
         <th>Category</th>
       </tr>
-      {listBooks.map((book) => (
-        <tr key={book}>
-          <td>{book.id}</td>
-          <td>{book.title}</td>
-          <td>{book.category}</td>
-        </tr>
-      ))}
+      {listBooks.map((el) => <Book book={el} key={el} />)}
     </table>
   );
 };
@@ -27,7 +22,7 @@ BooksList.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  listBooks: state,
+  listBooks: state.booksList,
 });
 
 export default connect(mapStateToProps, null)(BooksList);
