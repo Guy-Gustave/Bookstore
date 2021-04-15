@@ -5,10 +5,10 @@ const addBook = (bookObj) => (
   }
 );
 
-const removeBook = (id) => (
+const removeBook = (bookObj) => (
   {
     type: 'REMOVE_BOOK',
-    id,
+    id: bookObj.id,
   }
 );
 
