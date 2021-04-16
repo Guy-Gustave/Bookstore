@@ -19,4 +19,4 @@ const changeFilter = (category) => (
   }
 )
 
-export { addBook, removeBook };
+export { addBook, removeBook, changeFilter };
