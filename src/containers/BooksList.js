@@ -2,9 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
+import { removeBook } from '../actions/index';
 
 const BooksList = (props) => {
   const { listBooks } = props;
+
+
+  let handleRemoveBook = (book) => {
+    props.removeNewBook(book)
+  };
+
+
   return (
     <table>
       <tr>
@@ -12,7 +20,7 @@ const BooksList = (props) => {
         <th>Title</th>
         <th>Category</th>
       </tr>
-      {listBooks.map((el) => <Book book={el} key={el} />)}
+      {listBooks.map((el) => <Book book={el} key={el} remove={handleRemoveBook}/>)}
     </table>
   );
 };
@@ -25,4 +33,14 @@ const mapStateToProps = (state) => ({
   listBooks: state.booksList,
 });
 
-export default connect(mapStateToProps, null)(BooksList);
+const mapDispatchToProps = dispatch => {
+  return(
+    {
+      removeNewBook: (bookObj) => {
+        dispatch(removeBook(bookObj));
+      }
+    }
+  );
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
