@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 const Book = (props) => {
   const { book, remove } = props;
-  
+
   const handleRemove = () => {
     remove(book);
-  }
+  };
   return (
     <tr>
       <td>{book.id}</td>
@@ -21,10 +21,12 @@ const Book = (props) => {
 
 Book.defaultProps = {
   book: {},
+  remove: () => {},
 };
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.object),
+  remove: PropTypes.func,
 };
 
 export default Book;

@@ -7,11 +7,9 @@ import { removeBook } from '../actions/index';
 const BooksList = (props) => {
   const { listBooks } = props;
 
-
-  let handleRemoveBook = (book) => {
-    props.removeNewBook(book)
+  const handleRemoveBook = (book) => {
+    props.removeNewBook(book);
   };
-
 
   return (
     <table>
@@ -20,27 +18,26 @@ const BooksList = (props) => {
         <th>Title</th>
         <th>Category</th>
       </tr>
-      {listBooks.map((el) => <Book book={el} key={el} remove={handleRemoveBook}/>)}
+      {listBooks.map((el) => <Book book={el} key={el} remove={handleRemoveBook} />)}
     </table>
   );
 };
 
 BooksList.propTypes = {
   listBooks: PropTypes.objectOf(PropTypes.object).isRequired,
+  removeNewBook: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   listBooks: state.booksList,
 });
 
-const mapDispatchToProps = dispatch => {
-  return(
-    {
-      removeNewBook: (bookObj) => {
-        dispatch(removeBook(bookObj));
-      }
-    }
-  );
-}
+const mapDispatchToProps = (dispatch) => (
+  {
+    removeNewBook: (bookObj) => {
+      dispatch(removeBook(bookObj));
+    },
+  }
+);
 
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
