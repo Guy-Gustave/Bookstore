@@ -1,11 +1,17 @@
+# Bookstore
+> This is a front-end web application book store built with React and Redux.
 
-## Built With
+## Screenshot
+-  Coming soon
+
+## 🔧 Built With
 - CSS
 - JavaScript
 - React
+- Redux
 
-### `Live link`
-[Link to Netlify](https://sharp-brown-53e353.netlify.app/)
+### 🔴 Live Demo
+[Link to Netlify](https://keen-lamport-658f46.netlify.app/)
 
 #### To get this project on your local machine, follow these steps:
 
@@ -19,7 +25,22 @@ After cloning the project, you should move into the directory where the project 
 ```
 - Run `npm run start` to start the local server.
 
-## Author
+## 🤝 Contributions
+  There are two ways of contributing to this project:
+
+1. If you see something wrong or not working, please check [the issue tracker section](https://github.com/Guy-Gustave/Bookstore/issues), if that problem you met is not in already opened issues then open the issue by clicking on `new issue` button.
+
+2. If you have a solution to that, and you are willing to work on it, follow the below steps to contribute:
+    1.  Fork this repository
+
+    1.  Clone it on your local computer by running `git clone git@github.com:Guy-Gustave/Bookstore.git` __Replace *RNtaate* with the username you use on github__
+    1.  Open the cloned repository which appears as a folder on your local computer with your favorite code editor
+    1.  Create a separate branch off the *master branch*,
+    1.  Write your codes which fix the issue you found
+    1.  Commit and push the branch you created
+    1.  Raise a pull request, comparing your new created branch with our original master branch [here](https://github.com/Guy-Gustave/Bookstore)
+
+## ✒️ Author
 
 👤 **Guy Gustave NIGABA**
 
