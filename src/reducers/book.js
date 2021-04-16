@@ -1,4 +1,4 @@
-import initialState from './BooksInitialState';
+import { initialState } from './BooksInitialState';
 
 const books = (state = initialState, action) => {
   switch (action.type) {
