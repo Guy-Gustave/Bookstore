@@ -19,4 +19,7 @@ const initialState = [
   },
 ];
 
-export default initialState;
+const initialFilterState = 'All';
+
+
+export { initialFilterState, initialState };
