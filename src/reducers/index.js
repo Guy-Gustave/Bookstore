@@ -4,7 +4,7 @@ import filter from './filter';
 
 const allReducers = combineReducers({
   booksList: books,
-  categoryName: filter
+  categoryName: filter,
 });
 
 export default allReducers;

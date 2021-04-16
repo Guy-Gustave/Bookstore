@@ -14,26 +14,28 @@ const BooksList = (props) => {
 
   const handleFilterChange = (categoryName) => {
     props.filterCategory(categoryName);
-  }
+  };
 
   const filterBooksList = (array, filterCategory) => {
-    let secondList = [...array];
-    if(filterCategory === 'All'){
-      return secondList;  
+    const secondList = [...array];
+    if (filterCategory === 'All') {
+      return secondList;
     }
-    return secondList.filter(el => (el.category === filterCategory));
-  }
+    return secondList.filter((el) => (el.category === filterCategory));
+  };
 
   return (
     <>
-      <CategoryFilter filter={handleFilterChange}/>
+      <CategoryFilter filter={handleFilterChange} />
       <table>
         <tr>
           <th>ID</th>
           <th>Title</th>
           <th>Category</th>
         </tr>
-        {filterBooksList(listBooks, catName).map((el) => <Book book={el} key={el} remove={handleRemoveBook} />)}
+        {filterBooksList(listBooks, catName).map(
+          (el) => <Book book={el} key={el} remove={handleRemoveBook} />,
+        )}
       </table>
     </>
   );
@@ -42,11 +44,13 @@ const BooksList = (props) => {
 BooksList.propTypes = {
   listBooks: PropTypes.objectOf(PropTypes.object).isRequired,
   removeNewBook: PropTypes.func.isRequired,
+  catName: PropTypes.string.isRequired,
+  filterCategory: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
   listBooks: state.booksList,
-  catName: state.categoryName
+  catName: state.categoryName,
 });
 
 const mapDispatchToProps = (dispatch) => (
@@ -57,7 +61,7 @@ const mapDispatchToProps = (dispatch) => (
 
     filterCategory: (cat) => {
       dispatch(changeFilter(cat));
-    }
+    },
   }
 );
 

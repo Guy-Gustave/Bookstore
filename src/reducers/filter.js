@@ -1,13 +1,12 @@
-import { initialFilterState } from "./BooksInitialState";
+import { initialFilterState } from './BooksInitialState';
 
-const  filter =(state= initialFilterState, action) => {
+const filter = (state = initialFilterState, action) => {
   switch (action.type) {
     case 'CHANGE_FILTER':
       return action.categoryName;
-      break;
     default:
       return state;
   }
-}
+};
 
-export default filter
+export default filter;

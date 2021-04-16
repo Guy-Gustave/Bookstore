@@ -21,5 +21,4 @@ const initialState = [
 
 const initialFilterState = 'All';
 
-
 export { initialFilterState, initialState };
