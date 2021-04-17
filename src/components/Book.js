@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Book = (props) => {
-  const { book, remove } = props;
-
+const Book = ({ book, remove }) => {
   const handleRemove = () => {
     remove(book);
   };
@@ -19,14 +17,9 @@ const Book = (props) => {
   );
 };
 
-Book.defaultProps = {
-  book: {},
-  remove: () => {},
-};
-
 Book.propTypes = {
-  book: PropTypes.objectOf(PropTypes.object),
-  remove: PropTypes.func,
+  book: PropTypes.objectOf(PropTypes.object).isRequired,
+  remove: PropTypes.func.isRequired,
 };
 
 export default Book;
