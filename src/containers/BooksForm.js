@@ -27,7 +27,7 @@ const BooksForm = (props) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
     props.submitNewBook(localbook);
     setLocalBook(
       {
@@ -36,16 +36,17 @@ const BooksForm = (props) => {
         category: 'Action',
       },
     );
+    e.preventDefault();
   };
 
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input type="text" placeholder="Type book title here" name="input" onChange={handleChange} value={localbook.title} />
       <select name="select" onChange={handleChange} value={localbook.category}>
         {categories.map((el) => <option key={el} value={el}>{el}</option>)}
       </select>
-      <button type="button" onClick={handleSubmit}>Submit</button>
+      <button type="submit">Submit</button>
     </form>
   );
 };
