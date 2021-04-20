@@ -43,12 +43,12 @@ const BooksForm = (props) => {
   return (
     <div className="add-book mt-4">
       <h4 className="h2 text-secondary font-weight-bold m-3">ADD NEW BOOK</h4>
-      <form className='form d-flex justify-content-between' onSubmit={handleSubmit}>
-        <input type="text" className='w-150 mx-3 pl-4' style= {{width: '350px'}} placeholder="Type book title here" name="input" onChange={handleChange} value={localbook.title}  />
-        <select className=' mx-3' style= {{width: '150px'}} name="select" onChange={handleChange} value={localbook.category}>
+      <form className="form d-flex justify-content-between" onSubmit={handleSubmit}>
+        <input type="text" className="w-150 mx-3 pl-4" style={{ width: '350px' }} placeholder="Type book title here" name="input" onChange={handleChange} value={localbook.title} />
+        <select className=" mx-3" style={{ width: '150px' }} name="select" onChange={handleChange} value={localbook.category}>
           {categories.map((el) => <option key={el} value={el}>{el}</option>)}
         </select>
-        <button className='but btn-primary btn-lg px-5 ' type="submit">Submit</button>
+        <button className="but btn-primary btn-lg px-5 " type="submit">Submit</button>
       </form>
     </div>
   );

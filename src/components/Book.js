@@ -5,12 +5,9 @@ import BookProgress from './BookComponents/BookProgress';
 import BookChapter from './BookComponents/BookChapter';
 
 const Book = ({ book, remove }) => {
-  const handleRemove = () => {
-    remove(book);
-  };
   return (
     <div className="book-component-div container-fluid d-flex justify-content-between align-items-center mb-3 p-0">
-      <BookDetails book={book} remove={remove}/>
+      <BookDetails book={book} remove={remove} />
       <BookProgress />
       <BookChapter />
     </div>

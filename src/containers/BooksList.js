@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-import { removeBook, changeFilter } from '../actions/index';
+import { removeBook } from '../actions/index';
 
 const BooksList = (props) => {
   const { listBooks, catName } = props;
@@ -21,9 +21,9 @@ const BooksList = (props) => {
 
   return (
     <div className="container-fluid d-flex flex-column align-items-center">
-        {filterBooksList(listBooks, catName).map(
-          (el) => <Book book={el} key={el} remove={handleRemoveBook} />,
-        )}
+      {filterBooksList(listBooks, catName).map(
+        (el) => <Book book={el} key={el} remove={handleRemoveBook} />,
+      )}
     </div>
   );
 };
@@ -32,7 +32,6 @@ BooksList.propTypes = {
   listBooks: PropTypes.objectOf(PropTypes.object).isRequired,
   removeNewBook: PropTypes.func.isRequired,
   catName: PropTypes.string.isRequired,
-  filterCategory: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
