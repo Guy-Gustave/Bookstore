@@ -3,17 +3,12 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { removeBook, changeFilter } from '../actions/index';
-import CategoryFilter from '../components/CategoryFilter';
 
 const BooksList = (props) => {
   const { listBooks, catName } = props;
 
   const handleRemoveBook = (book) => {
     props.removeNewBook(book);
-  };
-
-  const handleFilterChange = (categoryName) => {
-    props.filterCategory(categoryName);
   };
 
   const filterBooksList = (array, filterCategory) => {
@@ -26,7 +21,6 @@ const BooksList = (props) => {
 
   return (
     <div className="w-100 d-flex">
-      {/* <CategoryFilter filter={handleFilterChange} /> */}
       <table className="">
         <tr>
           <th>ID</th>
@@ -57,10 +51,6 @@ const mapDispatchToProps = (dispatch) => (
   {
     removeNewBook: (bookObj) => {
       dispatch(removeBook(bookObj));
-    },
-
-    filterCategory: (cat) => {
-      dispatch(changeFilter(cat));
     },
   }
 );
