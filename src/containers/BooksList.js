@@ -20,17 +20,10 @@ const BooksList = (props) => {
   };
 
   return (
-    <div className="w-100 d-flex">
-      <table className="">
-        <tr>
-          <th>ID</th>
-          <th>Title</th>
-          <th>Category</th>
-        </tr>
+    <div className="container-fluid d-flex flex-column align-items-center">
         {filterBooksList(listBooks, catName).map(
           (el) => <Book book={el} key={el} remove={handleRemoveBook} />,
         )}
-      </table>
     </div>
   );
 };
