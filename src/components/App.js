@@ -9,7 +9,7 @@ const App = () => (
     <div className="d-flex flex-column justify-content-center align-items-center main-div">
       <BooksList />
       <BooksForm />
-      <p>Project by Guy and Roy</p>
+      <p className='mt-5 text-secondary font-italic'>Project by Guy and Roy</p>
     </div>
   </div>
 );
