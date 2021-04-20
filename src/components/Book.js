@@ -4,15 +4,13 @@ import BookDetails from './BookComponents/BookDetails';
 import BookProgress from './BookComponents/BookProgress';
 import BookChapter from './BookComponents/BookChapter';
 
-const Book = ({ book, remove }) => {
-  return (
-    <div className="book-component-div container-fluid d-flex justify-content-between align-items-center mb-3 p-0">
-      <BookDetails book={book} remove={remove} />
-      <BookProgress />
-      <BookChapter />
-    </div>
-  );
-};
+const Book = ({ book, remove }) => (
+  <div className="book-component-div container-fluid d-flex justify-content-between align-items-center mb-3 p-0">
+    <BookDetails book={book} remove={remove} />
+    <BookProgress />
+    <BookChapter />
+  </div>
+);
 
 Book.propTypes = {
   book: PropTypes.objectOf(PropTypes.object).isRequired,

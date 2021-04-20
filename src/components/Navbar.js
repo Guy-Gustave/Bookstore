@@ -17,7 +17,7 @@ const Navbar = ({ filterCategoryName }) => {
           <span className="text-secondary mx-5 books-span">BOOKS</span>
           <CategoryFilter filter={handleFilterChange} />
         </div>
-        <span className="text-primary d-flex justify-content-center align-items-center p-3"><i className="fas fa-user-alt"></i></span>
+        <span className="text-primary d-flex justify-content-center align-items-center p-3"><i className="fas fa-user-alt" /></span>
       </nav>
     </header>
   );
@@ -27,12 +27,10 @@ Navbar.propTypes = {
   filterCategoryName: PropTypes.func.isRequired,
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    filterCategoryName: (categoryName) => {
-      dispatch(changeFilter(categoryName));
-    },
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  filterCategoryName: (categoryName) => {
+    dispatch(changeFilter(categoryName));
+  },
+});
 
 export default connect(null, mapDispatchToProps)(Navbar);
