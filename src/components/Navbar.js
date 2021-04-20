@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import CategoryFilter from './CategoryFilter';
+import { changeFilter } from '../actions/index';
+import { connect } from 'react-redux';
 
-const Navbar = ({ handleFilterChange }) => (
+const Navbar = ({ filterCategoryName }) => {
+
+  const handleFilterChange = (categoryName) => {
+    filterCategoryName(categoryName);
+  }
+  return (
   <header className="bg-white ml-4 w-100 p-3">
     <nav className="container d-flex justify-content-arround align-items-center w-100">
       <div className="d-flex align-items-center">
@@ -11,11 +18,19 @@ const Navbar = ({ handleFilterChange }) => (
         <CategoryFilter filter={handleFilterChange} />
       </div>
     </nav>
-  </header>
-);
+  </header>);
+};
 
 Navbar.propTypes = {
   handleFilterChange: PropTypes.func.isRequired,
 };
 
-export default Navbar;
+const mapDispatchToProps = dispatch => {
+  return {
+    filterCategoryName: (categoryName) => {
+      dispatch(changeFilter(categoryName));
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Navbar);
