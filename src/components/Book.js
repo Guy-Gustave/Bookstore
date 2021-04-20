@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import BookDetails from './BookComponents/BookDetails';
+import BookProgress from './BookComponents/BookProgress';
+import BookChapter from './BookComponents/BookChapter';
 
 const Book = ({ book, remove }) => {
   const handleRemove = () => {
     remove(book);
   };
   return (
-    <tr>
-      <td>{book.id}</td>
-      <td>{book.title}</td>
-      <td>{book.category}</td>
-      <td>
-        <button type="button" onClick={handleRemove}>Remove Book</button>
-      </td>
-    </tr>
+    <div className="book-component-div container-fluid bg-success d-flex justify-content-between align-items-center mb-3 p-0">
+      <BookDetails book={book} remove={remove}/>
+      <BookProgress />
+      <BookChapter />
+    </div>
   );
 };
 
