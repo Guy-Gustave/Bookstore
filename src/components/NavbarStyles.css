@@ -3,7 +3,7 @@ header {
 }
 
 span.d-flex {
-  border: 1px solid lightgray; 
+  border: 1px solid lightgray;
   border-radius: 50%;
 }
 
@@ -32,7 +32,7 @@ span.d-flex {
   background-repeat: no-repeat;
 }
 
-.progress > div > img  {
+.progress > div > img {
   width: 100%;
   height: 100%;
   margin: 10px;
