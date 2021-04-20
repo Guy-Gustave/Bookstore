@@ -25,9 +25,9 @@ const BooksList = (props) => {
   };
 
   return (
-    <>
-      <CategoryFilter filter={handleFilterChange} />
-      <table>
+    <div className="w-100 d-flex">
+      {/* <CategoryFilter filter={handleFilterChange} /> */}
+      <table className="">
         <tr>
           <th>ID</th>
           <th>Title</th>
@@ -37,7 +37,7 @@ const BooksList = (props) => {
           (el) => <Book book={el} key={el} remove={handleRemoveBook} />,
         )}
       </table>
-    </>
+    </div>
   );
 };
 
