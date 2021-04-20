@@ -1,0 +1,21 @@
+header {
+  border-bottom: 2px solid #eee;
+}
+
+span.d-flex {
+  border: 1px solid lightgray; 
+  border-radius: 50%;
+}
+
+.books-span {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.navbar-select {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  outline: none;
+  width: 150px;
+  font-family: 'Montserrat', sans-serif;
+}
