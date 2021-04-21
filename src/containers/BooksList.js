@@ -20,7 +20,7 @@ const BooksList = (props) => {
   };
 
   return (
-    <div className="container-fluid d-flex flex-column align-items-center">
+    <div className="container-fluid d-flex flex-column align-items-center p-0">
       {filterBooksList(listBooks, catName).map(
         (el) => <Book book={el} key={el} remove={handleRemoveBook} />,
       )}
