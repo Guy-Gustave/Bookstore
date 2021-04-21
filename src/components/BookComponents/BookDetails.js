@@ -10,7 +10,7 @@ const BookDetails = ({ book, remove }) => {
   const authors = ['Roy NTAATE', 'Guy Gustave NIGABA', 'Ntaate from UGANDA', 'Ngugi wa Nthiongo', 'Adrien Ntabona'];
 
   return (
-    <div className="book-details-div container-fluid bg-light my-3" style={{ width: '200%' }}>
+    <div className="book-details-div container-fluid bg-light my-3 p-0 pl-4 bg-white" style={{ width: '200%' }}>
       <h6 className="text-secondary">{book.category}</h6>
       <h4 className="title">{book.title}</h4>
       <span className="spin-det mb-3 text-primary font-weight-light">{authors[Math.floor(Math.random() * 5)]}</span>

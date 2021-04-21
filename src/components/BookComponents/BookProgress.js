@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BookProgress = () => (
-  <div className="progress d-flex container-fluid bg-light my-3">
+  <div className="progress d-flex container-fluid my-3 bg-white">
     <div className="spinner-div" />
     <div className="book-progress-div px-3 mb-3">
       <h2 className="mt-4">
