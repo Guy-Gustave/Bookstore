@@ -8,7 +8,7 @@ const BookProgress = () => (
         {Math.floor(Math.random() * 100)}
         %
       </h2>
-      <p className="h6 text-secondary">Completed</p>
+      <p className="h6 text-secondary" style={{ fontFamily: "'Montserrat', sans-serif", fontSize: '15px' }}>Completed</p>
     </div>
   </div>
 );
