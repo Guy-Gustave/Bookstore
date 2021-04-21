@@ -49,7 +49,7 @@ const BooksForm = (props) => {
         <select className=" mr-3 form-select bg-white pl-2" style={{ width: '30%' }} name="select" onChange={handleChange} value={localbook.category}>
           {categories.map((el) => <option key={el} value={el}>{el}</option>)}
         </select>
-        <button className="but btn-primary btn-lg px-5 " type="submit" style={{ width: '20%' }}>Submit</button>
+        <button className="but btn-primary btn-lg px-5 " type="submit" style={{ width: '20%', border: 'none' }}>Submit</button>
       </form>
     </div>
   );
