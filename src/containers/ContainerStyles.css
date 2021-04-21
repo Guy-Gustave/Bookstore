@@ -1,0 +1,14 @@
+.add-book-div {
+  border-top: 2px solid #eee;
+}
+
+input,
+.form-select {
+  border: 1px solid #eee;
+  outline: none;
+  color: gray;
+}
+
+input::placeholder {
+  color: lightgray;
+}

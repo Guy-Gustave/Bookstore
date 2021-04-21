@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { addBook } from '../actions/index';
 import '../components/NavbarStyles.css';
+import './ContainerStyles.css';
 
 const BooksForm = (props) => {
   const [localbook, setLocalBook] = useState(
@@ -41,14 +42,14 @@ const BooksForm = (props) => {
 
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
   return (
-    <div className="add-book mt-4">
-      <h4 className="h2 text-secondary font-weight-bold m-3">ADD NEW BOOK</h4>
+    <div className="add-book-div mt-4 container-fluid p-0">
+      <h4 className="h2 text-secondary font-weight-bold my-3 ">ADD NEW BOOK</h4>
       <form className="form d-flex justify-content-between" onSubmit={handleSubmit}>
-        <input type="text" className="w-150 mx-3 pl-4" style={{ width: '350px' }} placeholder="Type book title here" name="input" onChange={handleChange} value={localbook.title} />
-        <select className=" mx-3" style={{ width: '150px' }} name="select" onChange={handleChange} value={localbook.category}>
+        <input type="text" className="mr-3 pl-4" style={{ width: '60%' }} placeholder="Type book title here" name="input" onChange={handleChange} value={localbook.title} />
+        <select className=" mr-3 form-select bg-white pl-2" style={{ width: '30%' }} name="select" onChange={handleChange} value={localbook.category}>
           {categories.map((el) => <option key={el} value={el}>{el}</option>)}
         </select>
-        <button className="but btn-primary btn-lg px-5 " type="submit">Submit</button>
+        <button className="but btn-primary btn-lg px-5 " type="submit" style={{ width: '20%' }}>Submit</button>
       </form>
     </div>
   );
