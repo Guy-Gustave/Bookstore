@@ -11,15 +11,15 @@ const BookDetails = ({ book, remove }) => {
 
   return (
     <div className="book-details-div container-fluid bg-light my-3 p-0 pl-4 bg-white" style={{ width: '200%' }}>
-      <h6 className="text-secondary">{book.category}</h6>
-      <h4 className="title">{book.title}</h4>
-      <span className="spin-det mb-3 text-primary font-weight-light">{authors[Math.floor(Math.random() * 5)]}</span>
-      <div className=" book-details-buttons-div d-flex">
-        <span className="pr-4 spin-det">Comment</span>
-        <span className="pr-4 spin-det ">
+      <h6 className="text-secondary book-category-h6">{book.category}</h6>
+      <h4 className="title mb-0">{book.title}</h4>
+      <span className="spin-det  text-primary font-weight-light">{authors[Math.floor(Math.random() * 5)]}</span>
+      <div className=" book-details-buttons-div d-flex mt-3">
+        <span className="pr-3 spin-det">Comment</span>
+        <span className="pr-3 pl-3 spin-det button-span">
           <button type="button" onClick={handleRemove}>Remove Book</button>
         </span>
-        <span className="pr-4 spin-det">Edit</span>
+        <span className="pl-3 spin-det">Edit</span>
       </div>
     </div>
   );

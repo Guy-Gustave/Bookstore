@@ -39,14 +39,25 @@ span.d-flex {
   padding: 20px;
 }
 
+.book-category-h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
 .title {
   font-size: 1.5rem;
   font-weight: bolder;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Slab', serif;
+}
+
+.spin-det,
+.chapter-details {
+  font-size: 14px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
 }
 
 .spin-det {
-  font-size: 14px;
   color: #4386bf;
 }
 
@@ -54,4 +65,10 @@ span.d-flex {
   border: none;
   background-color: transparent;
   color: #4386bf;
+  font-weight: normal;
+}
+
+.button-span {
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
 }
