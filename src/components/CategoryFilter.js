@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './NavbarStyles.css';
 
 const CategoryFilter = (props) => {
   const categories = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -9,7 +10,7 @@ const CategoryFilter = (props) => {
   };
 
   return (
-    <select name="categorySelect" onChange={handleFilter}>
+    <select name="categorySelect" onChange={handleFilter} className="navbar-select bg-white text-secondary p-1">
       {categories.map((cat) => (
         <option value={cat} key={cat}>
           {cat}
