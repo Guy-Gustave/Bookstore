@@ -11,7 +11,7 @@
 - Redux
 
 ### 🔴 Live Demo
-[Link to Netlify](https://confident-boyd-39a752.netlify.app/)
+[Link to Netlify](https://gustave-roy-bookstore.netlify.app/)
 
 #### To get this project on your local machine, follow these steps:
 
