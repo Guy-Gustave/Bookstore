@@ -11,7 +11,7 @@
 - Redux
 
 ### 🔴 Live Demo
-[Link to Netlify](https://gustave-roy-bookstore.netlify.app/)
+[Link to Netlify](https://bookstore-guy-roy.netlify.app/)
 
 #### To get this project on your local machine, follow these steps:
 
